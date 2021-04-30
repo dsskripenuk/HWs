@@ -1,0 +1,89 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.div1 {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 100px;
+    border: none;
+}
+
+.div2 {
+    color: black;
+}
+
+.blog {
+    position: relative;
+    width: 22em;
+    height: 27em;
+    background-size: 22em 27em;
+    box-shadow: 3px 3px 20px rgba(0,0,0,0.5);
+    margin: auto;
+    overflow: hidden;
+    background-repeat: repeat-x;
+}
+
+    .blog * {
+        position: relative;
+        z-index: 2;
+    }
+
+    .blog:hover .color-overlay {
+        background: rgba(74, 100, 114, 0.8);
+    }
+
+    .blog:hover .info {
+        bottom: -3em;
+        opacity: 1;
+    }
+
+.blog, .color-overlay {
+    border-radius: 0.7em;
+}
+
+.color-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    transition: 0.7s background;
+    background: rgba(74, 100, 114, 0.3);
+    z-index: 1;
+}
+
+.info {
+    font-family: 'Droid Serif', serif;
+    font-size: 1.2em;
+    color: #ddd;
+    line-height: 1.1em;
+    padding: 0 2em;
+    position: relative;
+    bottom: -4em;
+    opacity: 0;
+    background: transparent;
+    transition: opacity 0.3s, bottom 0.3s;
+    text-align: center;
+}

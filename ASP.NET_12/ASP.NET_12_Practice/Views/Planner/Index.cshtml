@@ -1,0 +1,22 @@
+﻿@model ASP.NET_12_Practice.Models.ListEventsViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            @Html.Partial("_CreateList", Model);
+        </div>
+        <div class="col-lg-6">
+            @Html.Partial("_EventsList", Model);
+        </div>
+    </div>
+</div>

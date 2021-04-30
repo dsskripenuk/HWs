@@ -1,0 +1,15 @@
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\bin\Debug\HW_SP_Parallel.exe.config
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\bin\Debug\HW_SP_Parallel.exe
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\bin\Debug\HW_SP_Parallel.pdb
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel.csprojAssemblyReference.cache
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\MainWindow.g.cs
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\App.g.cs
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel_MarkupCompile.cache
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel_MarkupCompile.lref
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\MainWindow.baml
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel.g.resources
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel.Properties.Resources.resources
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel.csproj.GenerateResource.cache
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel.csproj.CoreCompileInputs.cache
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel.exe
+C:\Users\dsskripenuk\source\repos\HW_SP_Parallel\HW_SP_Parallel\obj\Debug\HW_SP_Parallel.pdb

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Asp_Net_Anime.Models.AnimeViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var item in Model)
+{
+    <div id="modDialog" class="modal fade">
+        <div id="dialogContent" class="modal-dialog"></div>
+    </div>
+    <div class="col-md-4">
+        <a href="" style="text-decoration: none;">
+            <div class="blog div4" style="background-image: url(@Html.DisplayFor(modelItem => item.Image)); margin: 10px">
+                <div class="info">
+                    <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                    <h2>ID: @Html.DisplayFor(modelItem => item.Id)</h2>
+                </div>
+                <div class="color-overlay"></div>
+            </div>
+        </a>
+        <ul style="display: flex;">
+            <li style="margin: 5px">
+                @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "Inf btn btn-info" })
+            </li>
+        </ul>
+    </div>
+}
+
+@*@section scripts
+{
+    <script type="text/javascript">
+
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $(".Inf").click(function (e) {
+
+                e.preventDefault();
+                $.get(this.href, function (data) {
+                    $('#dialogContent').html(data);
+                    $('#modDialog').modal('show');
+                });
+            });
+        })
+    </script>
+}*@

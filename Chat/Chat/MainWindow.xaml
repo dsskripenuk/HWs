@@ -1,0 +1,40 @@
+﻿<Window x:Class="Chat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="462.012" Width="800">
+    <Grid>
+        <DockPanel>
+            <GroupBox>
+                <DockPanel LastChildFill="False">
+                    <DockPanel DockPanel.Dock="Top" Margin="5,5,10,5">
+                        <Label Margin="5">Username: </Label>
+                        <TextBox Margin="5" Name="usernameTB" Width="675"></TextBox>
+                    </DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top" Margin="5,5,10,5">
+                        <Label Margin="5">IP: </Label>
+                        <TextBox Margin="5" Name="IP_TB" HorizontalAlignment="Right" Width="673"></TextBox>
+                    </DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top" Margin="5" Height="223">
+                        <ListBox x:Name="messages"></ListBox>
+                    </DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top" Margin="5">
+                        <Label Margin="5">Message: </Label>
+                        <TextBox x:Name="messageTB" Margin="5" Width="683" HorizontalAlignment="Right"></TextBox>
+                    </DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top" Margin="5">
+                        <Button Margin="5" Name="sendBTN" Click="sendBTN_Click">Send</Button>
+                    </DockPanel>
+
+                </DockPanel>
+            </GroupBox>
+        </DockPanel>
+    </Grid>
+</Window>

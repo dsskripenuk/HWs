@@ -1,0 +1,57 @@
+﻿@model IEnumerable<YouTube.Models.UserViewModel_>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ChannelName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfilePhoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainPhoto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChannelDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChannelName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfilePhoto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainPhoto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChannelDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategoryId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

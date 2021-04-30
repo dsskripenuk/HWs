@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ASP.NET_HW_1.Models.ProductViewModel>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="col-md-4">
+                <img width="350" src="@Html.DisplayFor(modelItem => item.Image)" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Price)</li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>

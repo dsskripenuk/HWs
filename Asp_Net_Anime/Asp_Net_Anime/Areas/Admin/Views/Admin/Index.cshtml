@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Asp_Net_Anime.Models.AnimeViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateAnime", new { @class = "btn btn-info" })
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+            <div class="col-md-4">
+                <a href="~/Areas/Admin/Views/Admin/CategoryList.cshtml" style="text-decoration: none;">
+                    <div class="blog div4" style="background-image: url(@Html.DisplayFor(modelItem => item.Image)); margin: 10px">
+                        <div class="info">
+                            <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+                            <h2>ID: @Html.DisplayFor(modelItem => item.Id)</h2>
+                        </div>
+                        <div class="color-overlay"></div>
+                    </div>
+                </a>
+                <ul style="display: flex;">
+                    <li style="margin: 5px">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-info" })
+                    </li>
+                    <li style="margin: 5px">
+                        @Html.ActionLink("AddEp", "AddEpisodes", new { id = item.Id }, new { @class = "btn btn-info" })
+                    </li>
+                    <li style="margin: 5px">
+                        @Html.ActionLink("AddSreen", "AddSreenshot", new { id = item.Id }, new { @class = "btn btn-info" })
+                    </li>
+                </ul>
+            </div>
+    }
+</div>

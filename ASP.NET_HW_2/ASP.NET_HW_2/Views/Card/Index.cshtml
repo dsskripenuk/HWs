@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ASP.NET_HW_2.Models.CardViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="col-md-4">
+                <img width="350" src="@Html.DisplayFor(modelItem => item.Img)" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.FullDescription)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.ShortDescription)</li>
+                    <li class="list-group-item">@Html.DisplayFor(modelItem => item.Date)</li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>

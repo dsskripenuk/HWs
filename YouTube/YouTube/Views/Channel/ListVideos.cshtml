@@ -1,0 +1,23 @@
+﻿@model IEnumerable<YouTube.Models.VideoViewModel>
+
+@{
+    ViewBag.Title = "ListVideos";
+}
+
+<h2>ListVideos</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="video">
+            <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+            <img src="@Html.DisplayFor(modelItem => item.Img)" alt="">
+            <h4>@Html.ActionLink("Edit", "Edit", new { id = item.Id })</h4>
+            <h4> @Html.ActionLink("Delete", "Delete", new { id = item.Id })</h4>
+        </div>
+    }
+</div>

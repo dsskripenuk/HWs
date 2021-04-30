@@ -1,0 +1,90 @@
+﻿@model IEnumerable<ASP.NET_3.Models.ActorViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Actor", new { @class = "btn btn-info" })
+</p>
+
+
+
+
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="col-md-4">
+                <img width="350" src="@Html.DisplayFor(modelItem => item.URL_Image)" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.FullName)</h5>
+                    <p class="card-text"> @Html.DisplayFor(modelItem => item.Age)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        @Html.DisplayFor(modelItem => item.BirthDate)
+                    </li>
+                    <li class="list-group-item">
+                        @Html.DisplayFor(modelItem => item.Rating)
+                    </li>
+                    <li class="list-group-item">
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </li>
+                    <li class="list-group-item">
+                        @Html.DisplayFor(modelItem => item.ListWithWorks)
+                    </li>
+                    <li class="list-group-item">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-info" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-info" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+
+
+
+
+
+
+
+
+
+@*<table class="table">
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           <img width="200" src="@Html.DisplayFor(modelItem => item.URL_Image)"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BirthDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ListWithWorks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+}
+
+</table>*@

@@ -1,0 +1,22 @@
+﻿@model  ASP.NET_12.Models.DashboardViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            @Html.Partial("_ListProducts", Model.Products);
+        </div>
+        <div class="col-lg-6">
+            @Html.Partial("_ListOrders", Model.Orders);
+        </div>
+    </div>
+</div>

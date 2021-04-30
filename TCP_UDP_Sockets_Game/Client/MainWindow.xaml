@@ -1,0 +1,28 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="597.639">
+    <Grid>
+        <DockPanel>
+            <GroupBox>
+                <DockPanel LastChildFill="False">
+                    <DockPanel DockPanel.Dock="Top" Margin="5">
+                        <Button Margin="5" Name="generateBTN" Click="generateBTN_Click">Generate</Button>
+                        
+                        <Label Margin="5">IP: </Label>
+                        <TextBox Margin="5" Width="200" Name="IP_TB"></TextBox>
+                        
+                        <Label Margin="5">Port: </Label>
+                        <TextBox Margin="5" Width="200" HorizontalAlignment="Left" Name="portTB"></TextBox>
+                    </DockPanel>
+
+                    
+                </DockPanel>
+            </GroupBox>
+        </DockPanel>
+    </Grid>
+</Window>

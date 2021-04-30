@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Asp_Net_Anime.Models.CategoryViewModel>
+
+@{
+    ViewBag.Title = "CategoryList";
+}
+
+<h2>CategoryList</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateCategory", new { @class = "btn btn-info" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "DeleteCategory", new { id=item.Id }, new { @class = "btn btn-info" })
+        </td>
+    </tr>
+}
+
+</table>

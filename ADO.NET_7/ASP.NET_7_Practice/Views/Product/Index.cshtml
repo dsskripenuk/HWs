@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ASP.NET_7_Practice.Models.ProductViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="col-md-4">
+                <a href="info1.html" style="text-decoration: none;">
+                    <div class="blog" style="background-image: url(@Html.DisplayFor(modelItem => item.Image)); margin: 10px;">
+                        <div class="info">
+                            <h2>@Html.DisplayFor(modelItem => item.Name)</h2>
+                            <h2> @Html.DisplayFor(modelItem => item.Price)</h2>
+                        </div>
+                        <div class="color-overlay"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    }
+</div>
+

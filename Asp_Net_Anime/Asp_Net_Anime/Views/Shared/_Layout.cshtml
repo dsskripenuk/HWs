@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg changeColor">
+        <a class="navbar-brand changeColor">
+            @Html.ActionLink("Anime", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </a>
+        <div class="collapse navbar-collapse changeColor" id="navbarNav">
+            <ul class="nav navbar-nav changeColor">
+                @if (User.IsInRole("Admin"))
+                {
+                    <li>@Html.ActionLink("Admin panel", "Index", new { Area = "Admin", Controller = "Admin" })</li>
+                }
+                <li class="changeColor">@Html.ActionLink("Watch", "Index", "User")</li>
+                <li>
+                    <div style="padding-top: 12px">
+                        <div class="custom-checkbox">
+                            <input class="custom-checkbox-input" type="checkbox" id="custom-checkbox-discovery" />
+                            <label class="custom-checkbox-label" for="custom-checkbox-discovery">
+                                <label class="custom-checkbox-label-aux" for="custom-checkbox-discovery"></label>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="padding-right: 50px">
+                @Html.Partial("_LoginPartial")
+
+            </ul>
+        </div>
+    </nav>
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Anime", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Admin panel", "Index", new { Area = "Admin", Controller = "Admin" })</li>
+                        }
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div style="padding-top: 12px">
+                                <div class="custom-checkbox">
+                                    <input class="custom-checkbox-input" type="checkbox" id="custom-checkbox-discovery" />
+                                    <label class="custom-checkbox-label" for="custom-checkbox-discovery">
+                                        <label class="custom-checkbox-label-aux" for="custom-checkbox-discovery"></label>
+                                </div>
+                            </div>
+                        </li>
+                        <li>@Html.ActionLink("Watch", "Index", "User")</li>
+                        @Html.Partial("_LoginPartial")
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/main")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

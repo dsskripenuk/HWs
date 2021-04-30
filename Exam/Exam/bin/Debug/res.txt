@@ -1,0 +1,6 @@
+Dir: D:\All\words2.txt _______ Count: 4
+Dir: D:\All\words3.txt _______ Count: 2
+Dir: D:\All\words2.txt _______ Count: 4
+Dir: D:\All\words3.txt _______ Count: 2
+Dir: D:\All\words2.txt _______ Count: 4
+Dir: D:\All\words3.txt _______ Count: 2

@@ -1,0 +1,34 @@
+﻿<Window x:Class="HW_SP_Parallel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW_SP_Parallel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <GroupBox>
+                <DockPanel LastChildFill="False">
+
+                    <DockPanel DockPanel.Dock="Top" Margin="5">
+                        <TextBox Margin="5" Width="600" Name="openFileTb"></TextBox>
+                        <Button Margin="5" Name="openFileBtn" Click="openFileBtn_Click">OpenFile</Button>
+                    </DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top" Margin="5">
+                        <ListBox Height="280" x:Name="listBox"> 
+                            
+                        </ListBox>
+                    </DockPanel>
+
+                    <DockPanel DockPanel.Dock="Top" Margin="5">
+                        <Button DockPanel.Dock="Right" Margin="5" Content="Cancel" Canvas.Left="428" Canvas.Top="132" Width="75" Height="33" HorizontalAlignment="Right"/>
+                        <Button DockPanel.Dock="Right" Margin="5" Content="Start" Canvas.Left="428" Canvas.Top="132" Width="75" Height="33" HorizontalAlignment="Right" Click="Button_Click"/>
+                    </DockPanel>
+
+                </DockPanel>
+            </GroupBox>
+        </DockPanel>
+    </Grid>
+</Window>

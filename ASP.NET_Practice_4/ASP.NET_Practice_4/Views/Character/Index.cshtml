@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ASP.NET_Practice_4.Models.CharacterViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <div class="col-md-4">
+                <a href="info1.html" style="text-decoration: none;">
+                    <div class="blog div4" style="background-image: url(@Html.DisplayFor(modelItem => item.URL_Image)); margin: 10px">
+                        <div class="info">
+                            <h2>@Html.DisplayFor(modelItem => item.FullName)</h2>
+                        </div>
+                        <div class="color-overlay"></div>
+                    </div>
+                </a>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                       Age: @Html.DisplayFor(modelItem => item.Age)
+                    </li>
+                    <li class="list-group-item">
+                        BirthDate: @Html.DisplayFor(modelItem => item.BirthDate)
+                    </li>
+                    <li class="list-group-item">
+                        Rating: @Html.DisplayFor(modelItem => item.Rating)
+                    </li>
+                    <li class="list-group-item">
+                        Gender: @Html.DisplayFor(modelItem => item.Gender)
+                    </li>
+                    <li class="list-group-item">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-info" }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-info" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    }
+
+</div>

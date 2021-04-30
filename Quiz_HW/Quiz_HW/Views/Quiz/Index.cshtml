@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Quiz_HW.Models.QuestionViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+@foreach (var item in Model)
+{
+    <div class="box">
+        <div>
+            <h2 id="test_status"></h2>
+            <div id="test">
+                <h3>
+                    @Html.DisplayFor(modelItem => item.TextQuestion)
+                </h3>
+                <input type='radio' name='choices' value='A'>
+                    @Html.DisplayFor(modelItem => item.asnw1)
+                <br>
+                <input type='radio' name='choices' value='A'>
+                    @Html.DisplayFor(modelItem => item.asnw2)
+                <br>
+                <input type='radio' name='choices' value='A'>
+                    @Html.DisplayFor(modelItem => item.asnw3)
+                <br>
+                <input type='radio' name='choices' value='A'>
+                    @Html.DisplayFor(modelItem => item.asnw4)
+                <br>
+            </div>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </div>
+    </div>
+
+}
+
